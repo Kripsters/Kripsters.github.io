@@ -1,54 +1,99 @@
 header {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width:100vw;
-    z-index: 0;
+  background-color: rgb(77, 71, 71);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1000vw;
+  z-index: 0;
 }
 
 ul {
-    display: flex;
-    /*justify-content: space-around;*/
-    gap: 3vw; 
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
 }
 
 li {
-    list-style: none;
-    transition: transform 0.3s;
+  list-style: none;
+  transition: transform 0.3s;
 }
 
 li:hover {
-transform:translateY(-2.5px);
+  transform: translateY(-2.5px);
 }
 
 a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: color 0.3s;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s;
 }
 
 a:hover {
-    color:rgb(156, 170, 135);
+  color: rgb(156, 170, 135);
 }
 
 main {
-    margin-top: 68.8px;
+  margin-top: 68.8px;
 }
 
 .cube {
-    height:300px;
-    width:300px;
-    background-color: rgb(255, 77, 166);
-    position:relative;
+  height: 300px;
+  width: 300px;
+  background-color: rgb(255, 77, 166);
+  position: relative;
 }
 
 .inner-cube {
-    height:100px;
-    width:100px;
-    background-color: lawngreen;
-    position:absolute;
-    top:50px;
-    right:50px;
+  height: 100px;
+  width: 100px;
+  background-color: lawngreen;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.burger {
+  display: none;
+}
+
+.check {
+  display: none;
+}
+
+@media (max-width: 300px) {
+  .burger {
+    display: block;
+  }
+  ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: rgb(77, 71, 71);
+    width: 100vw;
+    margin: 0;
+    padding-left: 0;
+    align-items: center;
+  }
+
+  li {
+    padding-bottom: 20px;
+  }
+
+  .check {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .check:checked + ul {
+    display: flex;
+  }
 }
