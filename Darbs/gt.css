@@ -1,0 +1,16 @@
+/* Izvēlas visus bērnus bet ne mazbērnus utt */
+body > button {
+  padding: 10px 15px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 7px;
+}
+
+body > button:hover {
+  background-color: rgb(25, 25, 139);
+}
+
+button:hover {
+  display: none;
+}
