@@ -1,3 +1,38 @@
+body {
+  background-color: lightgray;
+}
+
+p {
+  font-size: 18px;
+  max-width: 500px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+article {
+  margin-bottom: 5vw;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: lawngreen;
+  transition: transform 0.5s;
+  margin: 50px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+}
+
 header {
   background-color: rgb(77, 71, 71);
   color: white;
@@ -5,8 +40,17 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 0;
-} /* Header izskats */
+  z-index: 10;
+}
+
+/* Header izskats */
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 footer {
   gap: 3vw;
@@ -55,13 +99,10 @@ a:hover {
 
 main {
   margin-top: 68.8px;
-}
-
-h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  flex-direction: column;
 }
 
 .burger {
@@ -76,29 +117,53 @@ h1 {
   height: 300px;
   width: 300px;
   background-color: rgb(255, 77, 166);
-  border-style:solid;
-  border-color:black;
+  border-style: solid;
+  border-color: black;
   border-radius: 10px;
   position: relative;
+  z-index: 0;
 }
 
 .inner-cube {
   height: 100px;
   width: 100px;
   background-color: lawngreen;
-  border-style:solid;
-  border-color:black;
+  border-style: solid;
+  border-color: black;
   border-radius: 10px;
   position: absolute;
   top: 50px;
   right: 50px;
+  z-index: 0;
+}
+
+.one:hover {
+  transform: scale(2);
+}
+
+.two:hover {
+  transform: rotate(45deg);
+}
+
+.three:hover {
+  transform: translateX(100px) translateY(-50px);
+}
+
+.four:hover {
+  transform: rotate(90deg);
+}
+
+.four {
+  transform-origin: right bottom;
 }
 
 @media (max-width: 475px) {
+
   /* Nomaina uz zemāko kodu kad ekrāns ir mazāks par 475px */
   .burger {
     display: block;
   }
+
   ul {
     display: none;
     position: absolute;
@@ -126,7 +191,8 @@ h1 {
     opacity: 0;
     cursor: pointer;
   }
-  .check:checked + ul {
+
+  .check:checked+ul {
     display: flex;
   }
 }
