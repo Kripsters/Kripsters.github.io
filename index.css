@@ -10,7 +10,6 @@ header {
 
 footer {
   gap: 3vw;
-
   background-color: rgb(77, 71, 71);
   color: white;
   position: absolute;
@@ -71,6 +70,28 @@ h1 {
 
 .check {
   display: none;
+}
+
+.cube {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(255, 77, 166);
+  border-style:solid;
+  border-color:black;
+  border-radius: 10px;
+  position: relative;
+}
+
+.inner-cube {
+  height: 100px;
+  width: 100px;
+  background-color: lawngreen;
+  border-style:solid;
+  border-color:black;
+  border-radius: 10px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
 }
 
 @media (max-width: 475px) {
