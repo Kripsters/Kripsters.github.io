@@ -61,7 +61,7 @@ main {
   display: none;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 475px) {
   .burger {
     display: block;
   }
