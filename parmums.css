@@ -120,6 +120,21 @@ main {
     align-items: center;
   }
 
+  #bf {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    top: unset;
+    left: 0;
+    flex-direction: column;
+    background-color: rgb(77, 71, 71);
+    width: 100%;
+    margin: 0;
+    padding-top: 5vw;
+    padding-left: 0;
+    align-items: center;
+  }
+
   li {
     padding-bottom: 20px;
   }
@@ -136,6 +151,10 @@ main {
   }
 
   .check:checked + ul {
+    display: flex;
+  }
+
+  .check:checked + #bf {
     display: flex;
   }
 }
