@@ -1,144 +1,141 @@
 body {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
-
 p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 h2 {
-    font-size: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
 }
 
 header {
-    background-color: rgb(77, 71, 71);
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
+  background-color: rgb(77, 71, 71);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 /* Header izskats */
 
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .centerimg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer {
-    gap: 3vw;
-    background-color: rgb(77, 71, 71);
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 0;
+  gap: 3vw;
+  background-color: rgb(77, 71, 71);
+  color: white;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 0;
 }
 
 ul {
-    display: flex;
-    flex-direction: row;
-    gap: 3vw;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  align-items: center;
+  justify-content: center;
 }
 
 li {
-    list-style: none;
-    transition: transform 0.3s;
+  list-style: none;
+  transition: transform 0.3s;
 }
 
 li:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: color 0.3s;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s;
 }
 
 a:hover {
-    color: rgb(156, 170, 135);
+  color: rgb(156, 170, 135);
 }
 
 .contact {
-    color: rgb(91, 91, 255);
+  color: rgb(91, 91, 255);
 }
 
 .contact:hover {
-    color: rgb(128, 128, 255);
+  color: rgb(128, 128, 255);
 }
 
 main {
-    margin-top: 68.8px;
+  margin-top: 68.8px;
 }
 
 .burger {
-    display: none;
+  display: none;
 }
 
 .check {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 475px) {
+  /* Nomaina uz zemāko kodu kad ekrāns ir mazāks par 475px */
+  .burger {
+    display: block;
+  }
 
-    /* Nomaina uz zemāko kodu kad ekrāns ir mazāks par 475px */
-    .burger {
-        display: block;
-    }
+  ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: rgb(77, 71, 71);
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    align-items: center;
+  }
 
-    ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        flex-direction: column;
-        background-color: rgb(77, 71, 71);
-        width: 100%;
-        margin: 0;
-        padding-left: 0;
-        align-items: center;
-    }
+  li {
+    padding-bottom: 20px;
+  }
 
-    li {
-        padding-bottom: 20px;
-    }
+  .check {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    cursor: pointer;
+  }
 
-    .check {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 40px;
-        height: 40px;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .check:checked+ul {
-        display: flex;
-    }
+  .check:checked + ul {
+    display: flex;
+  }
 }

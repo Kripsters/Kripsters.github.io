@@ -43,7 +43,6 @@ header {
   z-index: 10;
 }
 
-
 .center {
   display: flex;
   justify-content: center;
@@ -113,6 +112,9 @@ main {
 }
 
 .cube {
+  display: grid;
+  justify-content: center;
+  align-content: center;
   height: 300px;
   width: 300px;
   background-color: rgb(255, 77, 166);
@@ -130,9 +132,6 @@ main {
   border-style: solid;
   border-color: black;
   border-radius: 10px;
-  position: absolute;
-  top: 50px;
-  right: 50px;
   z-index: 0;
 }
 
@@ -157,7 +156,6 @@ main {
 }
 
 @media (max-width: 475px) {
-
   /* Nomaina uz zemāko kodu kad ekrāns ir mazāks par 475px */
   .burger {
     display: block;
@@ -191,7 +189,7 @@ main {
     cursor: pointer;
   }
 
-  .check:checked+ul {
+  .check:checked + ul {
     display: flex;
   }
 }
