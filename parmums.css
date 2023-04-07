@@ -30,7 +30,10 @@ header {
   z-index: 10;
 }
 
-/* Header izskats */
+.spacer {
+  width: 1%;
+  height: 25vw;
+}
 
 .center {
   display: flex;
@@ -102,6 +105,7 @@ main {
 }
 
 @media (max-width: 475px) {
+
   /* Nomaina uz zemāko kodu kad ekrāns ir mazāks par 475px */
   .burger {
     display: block;
@@ -150,11 +154,11 @@ main {
     cursor: pointer;
   }
 
-  .check:checked + ul {
+  .check:checked+ul {
     display: flex;
   }
 
-  .check:checked + #bf {
+  .check:checked+#bf {
     display: flex;
   }
 }

@@ -155,7 +155,17 @@ main {
   transform-origin: right bottom;
 }
 
+.screenshot {
+  height: 25vw;
+  width: 45vw;
+  border-style: solid;
+  border-color: black;
+  border-radius: 15px;
+  border-width: 5px;
+}
+
 @media (max-width: 475px) {
+
   /* Nomaina uz zemāko kodu kad ekrāns ir mazāks par 475px */
   .burger {
     display: block;
@@ -204,11 +214,11 @@ main {
     cursor: pointer;
   }
 
-  .check:checked + ul {
+  .check:checked+ul {
     display: flex;
   }
 
-  .check:checked + #bf {
+  .check:checked+#bf {
     display: flex;
   }
 }
