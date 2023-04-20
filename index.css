@@ -11,6 +11,14 @@ p {
   height: 2vw;
 }
 
+code {
+  background-color: rgb(167, 167, 167);
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
 h2 {
   font-size: 36px;
 }
@@ -224,5 +232,10 @@ main {
 
   .check:checked + #bf {
     display: flex;
+  }
+
+  .check:checked ~ #imghead {
+    src: "closesvg.svg";
+    height: 100vw;
   }
 }
