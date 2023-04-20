@@ -1,81 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kristera Kļaviņa Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/x-icon" href="smalflopa.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristera Kļaviņa Portfolio</title>
-  <link rel="stylesheet" href="index.css" />
-  <link rel="icon" type="image/x-icon" href="smalflopa.ico" />
-</head>
-
-<body>
-  <header>
-    <nav>
+  <body>
+    <header>
+      <nav>
+        <input class="check" type="checkbox" />
+        <ul>
+          <li><a href="/">Sākums</a></li>
+          <li><a href="/parmums.html">Kas es tāds esmu?</a></li>
+        </ul>
+        <div class="burger">
+          <img src="menusvg.svg" alt="Menu" id="imghead" />
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>Mans Portfolio</h1>
+      <article class="center">
+        <h2>Mans 1. Projekts</h2>
+        <div class="cube">
+          <div class="inner-cube"></div>
+        </div>
+        <p>
+          Mans pirmais projekts ko es vēlos rādit ir kubs kubā!😊<br />
+          Lai dabūtu šo gatavu, es lietoju 2 'div' elementus ar sakonfigurētiem
+          css stiliem. <br /><br />
+          Iekšējais kubs ir centrēts ar css-grid, bet abiem ir modificētas
+          krāsas/lielumi caur CSS. Vēl bija jāčakarējas ar z-indeksu lai
+          nestātos 'header' ceļā.
+        </p>
+      </article>
+      <article class="center">
+        <h2>Mans 2. Projekts</h2>
+        <p>Kubs kas palielinās 2 reizes.</p>
+        <div class="square one"></div>
+        <p>Kubs kas pagriežas par 45 grādiem.</p>
+        <div class="square two"></div>
+        <p>Kubs kas pārvietojas 100px pa labi un 50px uz augšu.</p>
+        <div class="square three"></div>
+        <p>Kubs kas nokrīt uz savas labās malas.</p>
+        <div class="square four"></div>
+        <p>
+          Šito es dabuju gatavu ar 'div' elementiem, kuriem ir pieliktas
+          transformācijas un pārmaiņas, ceturtajam vēl pielietots
+          transform-origin, lai kubs var griezties ap izvēloto punktu
+          pareizi.<br /><br />Katrs kubs ir 'div' elements ar savu klasi. Šeit
+          lietoju divas klases, viena vienāda visiem, otra atšķir katru no
+          katra.
+        </p>
+      </article>
+      <article class="center">
+        <h2>Mans 3. Projekts</h2>
+        <img
+          src="screen.png"
+          alt="Screenshot of this website"
+          class="screenshot"
+          style="margin-bottom: 3vw"
+        />
+        <p>
+          Mans pēdējais projekts ir, šī pati mājaslapa!<br />
+          Šī mājaslapa ir taisīta ar daudz grūtībām un daļēj-strādājoša koda. Tā
+          sastāv no diviem HTML failiem un tai katrai savs CSS fails, nekur nav
+          lietots JS. <br />
+          Mājaslapas ikona un motivācija ir 'Big Floppa'. Mans e-pasts pat ir
+          uzspiežāms!
+        </p>
+      </article>
+    </main>
+    <div class="break"></div>
+    <footer>
       <input class="check" type="checkbox" />
-      <ul>
-        <li><a href="/">Sākums</a></li>
-        <li><a href="/parmums.html">Kas es tāds esmu?</a></li>
+      <ul id="bf">
+        <li>Autors: VTDT IPb22 audzēknis, Kristers Kļaviņš</li>
+        <li>Motivācija: Big Floppa</li>
+        <li>
+          <a href="mailto:ipb22.k.klavins@vtdt.edu.lv" class="contact"
+            >ipb22.k.klavins@vtdt.edu.lv</a
+          >
+        </li>
       </ul>
       <div class="burger">
         <img src="menusvg.svg" alt="Menu" />
       </div>
-    </nav>
-  </header>
-  <main>
-    <h1>Mans Portfolio</h1>
-    <article class="center">
-      <h2>Mans 1. Projekts</h2>
-      <div class="cube">
-        <div class="inner-cube"></div>
-      </div>
-      <p>
-        Mans pirmais projekts ko es vēlos rādit ir kubs kubā!😊<br />
-        Lai dabūtu šo gatavu, es lietoju modernās tehnoloģijas kā 'div' un
-        'css'.
-      </p>
-    </article>
-    <br /><br />
-    <article class="center">
-      <h2>Mans 2. Projekts</h2>
-      <p>Kubs kas palielinās 2 reizes.</p>
-      <div class="square one"></div>
-      <p>Kubs kas pagriežas par 45 grādiem.</p>
-      <div class="square two"></div>
-      <p>Kubs kas pārvietojas 100px pa labi un 50px uz augšu.</p>
-      <div class="square three"></div>
-      <p>Kubs kas nokrīt uz savas labās malas.</p>
-      <div class="square four"></div>
-      <p>
-        Šito es dabuju gatavu ar 'div' elementiem, kuriem ir pieliktas
-        transformācijas un pārmaiņas.<br /><br />Maģiski!
-      </p>
-    </article>
-    <br />
-    <br />
-    <article class="center">
-      <h2>Mans 3. Projekts</h2>
-      <img src="screen.png" alt="Screenshot of this website" class="screenshot">
-      <p>Mans pēdējais projekts ir, šī pati mājaslapa!<br>Es šito izvēlējos jo biji par slinku lai dabūtu 3.
-        projektu gatavu.</p>
-    </article>
-    <br />
-  </main>
-  <br /><br />
-  <footer>
-    <input class="check" type="checkbox" />
-    <ul id="bf">
-      <li>Autors: VTDT IPb22 audzēknis, Kristers Kļaviņš</li>
-      <li>Motivācija: Big Floppa</li>
-      <li>
-        <a href="mailto:ipb22.k.klavins@vtdt.edu.lv" class="contact">ipb22.k.klavins@vtdt.edu.lv</a>
-      </li>
-    </ul>
-    <div class="burger">
-      <img src="menusvg.svg" alt="Menu" />
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
