@@ -3,7 +3,7 @@ body {
 }
 
 p {
-  font-size: 18px;
+  font-size: 24px;
   max-width: 500px;
 }
 
@@ -19,6 +19,41 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: 50px;
+}
+
+article {
+  margin-bottom: 6vw;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex: 25%;
+  max-width: 17%;
+  padding: 0 8px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  transition: scale 0.6s;
+  transition: border-radius 0.3s;
+  border-radius: 25px;
+}
+
+.column img:hover {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  transform: scale(1.05);
+  border-radius: 20px;
 }
 
 code {
@@ -51,12 +86,30 @@ header {
   flex-direction: column;
 }
 
+.centerCollage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 15vw;
+  padding-right: 15vw;
+}
+
 .centerimg {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 35vw;
-  height: 35vh;
+  width: 55vw;
+  height: auto;
+  max-width: 100%;
+}
+
+#jager {
+  transition: transform 0.3s;
+}
+
+#jager:hover {
+  transform: scale(1.05);
 }
 
 footer {
@@ -116,7 +169,22 @@ main {
   display: none;
 }
 
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 475px) {
+
   /* Nomaina uz zemāko kodu kad ekrāns ir mazāks par 475px */
   .burger {
     display: block;
@@ -165,11 +233,11 @@ main {
     cursor: pointer;
   }
 
-  .check:checked + ul {
+  .check:checked+ul {
     display: flex;
   }
 
-  .check:checked + #bf {
+  .check:checked+#bf {
     display: flex;
   }
 }
